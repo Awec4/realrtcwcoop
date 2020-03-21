@@ -1,0 +1,7 @@
+reciever,models/weapons2/ppsh/ppsh_reciever.tga
+stock,models/weapons2/ppsh/ppsh_stock.tga
+barrel,models/weapons2/ppsh/ppsh_misc.tga
+bolt,models/weapons2/ppsh/ppsh_reciever.tga
+clip,models/weapons2/ppsh/ppsh_stock.tga
+hqhand,models/weapons2/arms/nightstrike/nightstrike_gloves.tga
+hqarm,models/weapons2/arms/nightstrike/nightstrike_sleeve.tga
