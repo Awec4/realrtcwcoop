@@ -379,6 +379,20 @@ venomPain
 //
 /////////////////////////
 
+eliteGuardAttackPlayer
+{
+	channel voice
+	sound sound/scenaric/general/fema_you_are_outnumbered.wav
+	sound sound/scenaric/general/fema_were_under_attack.wav
+	sound sound/scenaric/general/fem_its_ze_american.wav
+	sound sound/scenaric/general/fem_halt.wav
+	sound sound/scenaric/general/fem_die.wav
+	sound sound/scenaric/general/fem_take_cover.wav
+	sound sound/scenaric/general/fem_you_are_dead_american.wav
+	sound sound/scenaric/general/fema_cover_me.wav
+	
+}
+
 eliteGuardPain
 {
 	channel voice
