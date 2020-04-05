@@ -1,22 +1,22 @@
 #!/bin/sh
 CC=gcc-4.0
-APPBUNDLE=rtcwcoop.app
-BINARY=rtcwcoop.ub
-DEDBIN=rtcwcoopded.ub
+APPBUNDLE=realrtcwcoop.app
+BINARY=realrtcwcoop.ub
+DEDBIN=realrtcwcoopded.ub
 PKGINFO=APPLCOOP
 ICNS=misc/rtcwcoop.icns
 DESTDIR=build/release-darwin-ub
-BASEDIR=coopmain
+BASEDIR=realcoopmain
 
 BIN_OBJ="
-	build/release-darwin-x86_64/rtcwcoop.x86_64
-	build/release-darwin-x86/rtcwcoop.x86
-	build/release-darwin-ppc/rtcwcoop.ppc
+	build/release-darwin-x86_64/realrtcwcoop.x86_64
+	build/release-darwin-x86/realrtcwcoop.x86
+	build/release-darwin-ppc/realrtcwcoop.ppc
 "
 BIN_DEDOBJ="
-	build/release-darwin-x86_64/rtcwcoopded.x86_64
-	build/release-darwin-x86/rtcwcoopded.x86
-	build/release-darwin-ppc/rtcwcoopded.ppc
+	build/release-darwin-x86_64/realrtcwcoopded.x86_64
+	build/release-darwin-x86/realrtcwcoopded.x86
+	build/release-darwin-ppc/realrtcwcoopded.ppc
 "
 BASE_OBJ="
 	build/release-darwin-x86_64/$BASEDIR/cgame.coop.x86_64.dylib
@@ -40,7 +40,7 @@ RENDER_OBJ="
 
 cd `dirname $0`
 if [ ! -f Makefile ]; then
-	echo "This script must be run from the rtcwcoop build directory"
+	echo "This script must be run from the realrtcwcoop build directory"
 	exit 1
 fi
 
@@ -49,8 +49,8 @@ Q3_VERSION=`grep '^VERSION=' Makefile | sed -e 's/.*=\(.*\)/\1/'`
 # we want to use the oldest available SDK for max compatiblity. However 10.4 and older
 # can not build 64bit binaries, making 10.5 the minimum version.   This has been tested 
 # with xcode 3.1 (xcode31_2199_developerdvd.dmg).  It contains the 10.5 SDK and a decent
-# enough gcc to actually compile rtcwcoop
-# For PPC macs, G4's or better are required to run rtcwcoop.
+# enough gcc to actually compile realrtcwcoop
+# For PPC macs, G4's or better are required to run realrtcwcoop.
 
 unset X86_64_SDK
 unset X86_64_CFLAGS
@@ -151,7 +151,7 @@ echo "
 		<key>CFBundleExecutable</key>
 		<string>$BINARY</string>
 		<key>CFBundleGetInfoString</key>
-		<string>rtcwcoop $Q3_VERSION</string>
+		<string>realrtcwcoop $Q3_VERSION</string>
 		<key>CFBundleIconFile</key>
 		<string>rtcwcoop.icns</string>
 		<key>CFBundleIdentifier</key>
@@ -159,7 +159,7 @@ echo "
 		<key>CFBundleInfoDictionaryVersion</key>
 		<string>6.0</string>
 		<key>CFBundleName</key>
-		<string>rtcwcoop</string>
+		<string>realrtcwcoop</string>
 		<key>CFBundlePackageType</key>
 		<string>APPL</string>
 		<key>CFBundleShortVersionString</key>

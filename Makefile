@@ -131,22 +131,22 @@ endif
 
 ifndef CLIENTBIN
   ifdef MINGW
-    CLIENTBIN=RTCWCoop
+    CLIENTBIN=RealRTCWCoop
   else
-    CLIENTBIN=rtcwcoop
+    CLIENTBIN=realrtcwcoop
   endif
 endif
 
 ifndef SERVERBIN
   ifdef MINGW
-    SERVERBIN=RTCWCoopDED
+    SERVERBIN=RealRTCWCoopDED
   else
-    SERVERBIN=rtcwcoopded
+    SERVERBIN=realrtcwcoopded
   endif
 endif
 
 ifndef BASEGAME
-BASEGAME=coopmain
+BASEGAME=realcoopmain
 endif
 
 ifndef BASEGAME_CFLAGS

@@ -51,18 +51,18 @@ If you have questions concerning this license or the applicable additional terms
   #define GAMENAME_FOR_MASTER		"foobar"	// must NOT contain whitespace
 //  #define LEGACY_PROTOCOL	// You probably don't need this for your standalone game
 #else
-  #define PRODUCT_NAME			"RTCWCoop"
+  #define PRODUCT_NAME			"RealRTCWCoop"
   #define BASEGAME			"main"
-  #define COOP_BASEGAME			"coopmain"
+  #define COOP_BASEGAME			"realcoopmain"
   #define CLIENT_WINDOW_TITLE     	"Return To Castle Wolfenstein Coop"
-  #define CLIENT_WINDOW_MIN_TITLE 	"RTCWCoop"
+  #define CLIENT_WINDOW_MIN_TITLE 	"RealRTCWCoop"
 #ifdef USE_XDG
-  #define HOMEPATH_NAME_UNIX		"rtcwcoop"
+  #define HOMEPATH_NAME_UNIX		"realrtcwcoop"
 #else
   #define HOMEPATH_NAME_UNIX		".wolf"
 #endif
-  #define HOMEPATH_NAME_WIN		"RTCWCoop"
-  #define HOMEPATH_NAME_MACOSX		"rtcwcoop"
+  #define HOMEPATH_NAME_WIN		"RealRTCWCoop"
+  #define HOMEPATH_NAME_MACOSX		"RealRTCWCoop"
   #define GAMENAME_FOR_MASTER		"wolfcoop"
 //  #define LEGACY_PROTOCOL
 #endif

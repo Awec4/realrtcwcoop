@@ -28,19 +28,19 @@ fi
 
 CC=clang
 CXX=clang++
-APPBUNDLE=rtcwcoop.app
-BINARY=rtcwcoop.${ARCH}
-DEDBIN=rtcwcoopded.${ARCH}
+APPBUNDLE=realrtcwcoop.app
+BINARY=realrtcwcoop.${ARCH}
+DEDBIN=realrtcwcoopded.${ARCH}
 PKGINFO=APPLCOOP
 ICNS=misc/rtcwcoop.icns
 DESTDIR=build/release-darwin-${BUILDARCH}
-BASEDIR=coopmain
+BASEDIR=realcoopmain
 
 BIN_OBJ="
-	build/release-darwin-${BUILDARCH}/rtcwcoop.${BUILDARCH}
+	build/release-darwin-${BUILDARCH}/realrtcwcoop.${BUILDARCH}
 "
 BIN_DEDOBJ="
-	build/release-darwin-${BUILDARCH}/rtcwcoopded.${BUILDARCH}
+	build/release-darwin-${BUILDARCH}/realrtcwcoopded.${BUILDARCH}
 "
 BASE_OBJ="
 	build/release-darwin-${BUILDARCH}/$BASEDIR/cgame.coop.${ARCH}.dylib
@@ -103,7 +103,7 @@ echo "
 		<key>CFBundleExecutable</key>
 		<string>$BINARY</string>
 		<key>CFBundleGetInfoString</key>
-		<string>rtcwcoop $Q3_VERSION</string>
+		<string>realrtcwcoop $Q3_VERSION</string>
 		<key>CFBundleIconFile</key>
 		<string>rtcwcoop.icns</string>
 		<key>CFBundleIdentifier</key>
@@ -111,7 +111,7 @@ echo "
 		<key>CFBundleInfoDictionaryVersion</key>
 		<string>6.0</string>
 		<key>CFBundleName</key>
-		<string>rtcwcoop</string>
+		<string>realrtcwcoop</string>
 		<key>CFBundlePackageType</key>
 		<string>APPL</string>
 		<key>CFBundleShortVersionString</key>

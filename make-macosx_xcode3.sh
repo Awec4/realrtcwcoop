@@ -29,13 +29,13 @@ fi
 
 CC=gcc-4.0
 CXX=g++-4.0
-APPBUNDLE=rtcwcoop.app
-BINARY=rtcwcoop.${ARCH}
-DEDBIN=rtcwcoopded.${ARCH}
+APPBUNDLE=realrtcwcoop.app
+BINARY=realrtcwcoop.${ARCH}
+DEDBIN=realrtcwcoopded.${ARCH}
 PKGINFO=APPLCOOP
 ICNS=misc/rtcwcoop.icns
 DESTDIR=build/release-darwin-${BUILDARCH}
-BASEDIR=coopmain
+BASEDIR=realcoopmain
 
 BIN_OBJ="
 	build/release-darwin-${BUILDARCH}/rtcwcoop.${BUILDARCH}
@@ -55,7 +55,7 @@ RENDER_OBJ="
 
 cd `dirname $0`
 if [ ! -f Makefile ]; then
-	echo "This script must be run from the rtcwcoop build directory"
+	echo "This script must be run from the realrtcwcoop build directory"
 	exit 1
 fi
 
@@ -68,8 +68,8 @@ TIGERHOST=`uname -r |perl -w -p -e 's/\A(\d+)\..*\Z/$1/; $_ = (($_ >= 8) ? "1" :
 # we want to use the oldest available SDK for max compatiblity. However 10.4 and older
 # can not build 64bit binaries, making 10.5 the minimum version.   This has been tested 
 # with xcode 3.1 (xcode31_2199_developerdvd.dmg).  It contains the 10.5 SDK and a decent
-# enough gcc to actually compile rtcwcoop
-# For PPC macs, G4's or better are required to run rtcwcoop.
+# enough gcc to actually compile realrtcwcoop
+# For PPC macs, G4's or better are required to run realrtcwcoop.
 
 unset ARCH_SDK
 unset ARCH_CFLAGS
@@ -118,7 +118,7 @@ echo "
 		<key>CFBundleExecutable</key>
 		<string>$BINARY</string>
 		<key>CFBundleGetInfoString</key>
-		<string>rtcwcoop $Q3_VERSION</string>
+		<string>realrtcwcoop $Q3_VERSION</string>
 		<key>CFBundleIconFile</key>
 		<string>rtcwcoop.icns</string>
 		<key>CFBundleIdentifier</key>
@@ -126,7 +126,7 @@ echo "
 		<key>CFBundleInfoDictionaryVersion</key>
 		<string>6.0</string>
 		<key>CFBundleName</key>
-		<string>rtcwcoop</string>
+		<string>realrtcwcoop</string>
 		<key>CFBundlePackageType</key>
 		<string>APPL</string>
 		<key>CFBundleShortVersionString</key>

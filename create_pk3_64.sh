@@ -15,10 +15,10 @@ cd media/sp_pak_coop1
 zip -r $PAKFILE ./ -x "*.svn*"
 
 #if [ "`uname`" = "Darwin" ]; then
-        #cp $PAKFILE ~/Documents/rtcwcoop/coopmain/
+        #cp $PAKFILE ~/Documents/realrtcwcoop/realcoopmain/
 #fi
 if [ "`uname`" = "Linux" ]; then
-        cp $PAKFILE ~/.wolf/coopmain/
+        cp $PAKFILE ~/.wolf/realcoopmain/
 fi
 
 
@@ -27,15 +27,15 @@ mv $PAKFILE ../
 echo "Creating bin.pk3"
 
 if [ "`uname`" = "Darwin" ]; then
-        cd "../../build/$TARGET-darwin-x86_64/coopmain/"
+        cd "../../build/$TARGET-darwin-x86_64/realcoopmain/"
         zip -r bin.pk3 *.dylib
-        cp bin.pk3 ~/Documents/rtcwcoop/coopmain/
+        cp bin.pk3 ~/Documents/realrtcwcoop/realcoopmain/
         mv bin.pk3 ../../../media/
 fi
 if [ "`uname`" = "Linux" ]; then
-        cd "../../build/$TARGET-linux-x86_64/coopmain/"
+        cd "../../build/$TARGET-linux-x86_64/realcoopmain/"
         zip -r bin.pk3 *.so
-        cp bin.pk3 ~/.wolf/coopmain/
+        cp bin.pk3 ~/.wolf/realcoopmain/
         mv bin.pk3 ../../../media/
 fi
 
