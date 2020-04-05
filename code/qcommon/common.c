@@ -47,9 +47,9 @@ int demo_protocols[] =
 #define MAX_NUM_ARGVS   50
 
 #define MIN_DEDICATED_COMHUNKMEGS 1
-#define MIN_COMHUNKMEGS		512
-#define DEF_COMHUNKMEGS 	512
-#define DEF_COMZONEMEGS		64
+#define MIN_COMHUNKMEGS		256
+#define DEF_COMHUNKMEGS 	1024
+#define DEF_COMZONEMEGS		128
 #define DEF_COMHUNKMEGS_S	XSTRING(DEF_COMHUNKMEGS)
 #define DEF_COMZONEMEGS_S	XSTRING(DEF_COMZONEMEGS)
 
@@ -3216,7 +3216,7 @@ void Field_AutoComplete( field_t *field )
 ==================
 Com_RandomBytes
 
-fills string array with len radom bytes, peferably from the OS randomizer
+fills string array with len random bytes, peferably from the OS randomizer
 ==================
 */
 void Com_RandomBytes( byte *string, int len )

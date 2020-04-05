@@ -69,7 +69,7 @@ If you have questions concerning this license or the applicable additional terms
   #define GOGPATH_ID			"1441704976"
   #define HOMEPATH_NAME_MACOSX		"realrtcwcoop"
   #define GAMENAME_FOR_MASTER		"wolfcoop"
-//  #define LEGACY_PROTOCOL
+  #define LEGACY_PROTOCOL
 #endif
 
 // Heartbeat for dpmaster protocol. You shouldn't change this unless you know what you're doing
@@ -77,7 +77,7 @@ If you have questions concerning this license or the applicable additional terms
 #define FLATLINE_FOR_MASTER		"WolfFlatlineCoop-1"
 
 #ifndef PRODUCT_VERSION
-  #define PRODUCT_VERSION "1.0.3"
+  #define PRODUCT_VERSION "3.0" // iortcw 1.51
 #endif
 
 #ifndef PRODUCT_DATE
@@ -86,10 +86,10 @@ If you have questions concerning this license or the applicable additional terms
 
 #define Q3_VERSION PRODUCT_NAME " " PRODUCT_VERSION
 
-#define RTCWCOOP_VERSION_NUMBER "1.0.3"
-#define RTCWCOOP_VERSION_DIGIT_1 1
+#define RTCWCOOP_VERSION_NUMBER "3.0"
+#define RTCWCOOP_VERSION_DIGIT_1 3
 #define RTCWCOOP_VERSION_DIGIT_2 0
-#define RTCWCOOP_VERSION_DIGIT_3 3
+#define RTCWCOOP_VERSION_DIGIT_3 0
 
 #define MAX_COOP_CLIENTS 8
 
@@ -481,7 +481,6 @@ extern vec4_t clrBrownTextLt2;
 extern vec4_t clrBrownLineFull;
 
 #define Q_COLOR_ESCAPE  '^'
-//#define Q_IsColorString( p )  ( p && *( p ) == Q_COLOR_ESCAPE && *( ( p ) + 1 ) && *( ( p ) + 1 ) != Q_COLOR_ESCAPE )
 qboolean Q_IsColorString(const char *p);  // ^[0-9a-zA-Z]
 
 #define COLOR_BLACK     '0'
@@ -632,7 +631,7 @@ static ID_INLINE float Q_rsqrt( float number ) {
 		y = __frsqrte( number );
 #endif
 		return y * (1.5f - (x * y * y));
-	}
+}
 
 #ifdef __GNUC__            
 static ID_INLINE float Q_fabs(float x) {
@@ -648,7 +647,7 @@ static ID_INLINE float Q_fabs(float x) {
 #else
 float Q_fabs( float f );
 float Q_rsqrt( float f );       // reciprocal square root
-#endif
+#endif // idppc
 
 #define SQRTFAST( x ) ( 1.0f / Q_rsqrt( x ) )
 
@@ -707,7 +706,7 @@ typedef struct {
 
 #define SnapVector( v ) {v[0] = ( (int)( v[0] ) ); v[1] = ( (int)( v[1] ) ); v[2] = ( (int)( v[2] ) );}
 
-// just in case you do't want to use the macros
+// just in case you don't want to use the macros
 vec_t _DotProduct( const vec3_t v1, const vec3_t v2 );
 void _VectorSubtract( const vec3_t veca, const vec3_t vecb, vec3_t out );
 void _VectorAdd( const vec3_t veca, const vec3_t vecb, vec3_t out );
@@ -1295,7 +1294,7 @@ typedef enum {
 #define MAX_SOUNDS          256     // so they cannot be blindly increased
 
 
-#define MAX_PARTICLES_AREAS     128
+#define MAX_PARTICLES_AREAS     512 // RealRTCW was 128
 
 #define MAX_MULTI_SPAWNTARGETS  16 // JPW NERVE
 
@@ -1323,7 +1322,7 @@ typedef enum {
 
 #define RESERVED_CONFIGSTRINGS  2   // game can't modify below this, only the system can
 
-#define MAX_GAMESTATE_CHARS 16000
+#define MAX_GAMESTATE_CHARS 32000
 typedef struct {
 	int stringOffsets[MAX_CONFIGSTRINGS];
 	char stringData[MAX_GAMESTATE_CHARS];
